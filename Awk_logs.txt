@@ -7,6 +7,3 @@ cat finalResult.csv
 awk 'BEGIN{FS=")"} {print $1}' finalResult.csv > finalYears.csv
 awk '{print $1}' finalYears.csv | sort -n > endResult.csv
 cat endResult.csv
-
-
-
