@@ -1,0 +1,12 @@
+ls -l
+cat movies.csv
+awk 'BEGIN{FS="("} NR<1000 {print $2}' movies.csv > movieSelected.csv
+cat movieSelected
+awk '/^[0-9]/ { print }' movieSelected.csv > finalResult.csv
+cat finalResult.csv
+awk 'BEGIN{FS=")"} {print $1}' finalResult.csv > finalYears.csv
+awk '{print $1}' finalYears.csv | sort -n > endResult.csv
+cat endResult.csv
+
+
+
